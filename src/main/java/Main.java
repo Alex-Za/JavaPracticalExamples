@@ -1,4 +1,4 @@
-import test.Example;
+import exception.Example;
 
 public class Main {
     public static void main(String[] args) {
