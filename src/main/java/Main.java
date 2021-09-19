@@ -1,11 +1,13 @@
-import exception.Example;
-import multithreading.MyThread;
-import multithreading.MyThread2;
+
 
 public class Main {
     public static void main(String[] args) {
 
-        new MyThread2();
+        int value = 24;
+        Integer valueInteger = Integer.valueOf(value);
+
+        int otherValue = valueInteger.intValue();
+
 
     }
 }

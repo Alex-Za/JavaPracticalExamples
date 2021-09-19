@@ -1,10 +1,12 @@
 package multithreading;
 
 public class MyThread implements Runnable {
-    Thread t;
+    public Thread t;
+    String name;
 
-    public MyThread() {
-        t = new Thread(this, "Test thread");
+    public MyThread(String name) {
+        this.name = name;
+        t = new Thread(this, name);
         System.out.println("Test thread created");
         t.start();
     }
@@ -13,13 +15,13 @@ public class MyThread implements Runnable {
     public void run() {
         try {
             for (int i = 0; i < 5; i++) {
-                System.out.println("Test stream: " + i);
+                System.out.println(name + ": " + i);
                 Thread.sleep(500);
             }
         } catch (InterruptedException e) {
-            System.out.println("Test stream breaks");
+            System.out.println(name + " break");
         }
-        System.out.println("Test stream complete");
+        System.out.println(name + " complete");
 
     }
 }
