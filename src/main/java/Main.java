@@ -6,12 +6,13 @@ import functional_interface.generic_method_references.GenericMethodRefDemo;
 import input_output_streams.BufferedReaderExample;
 import input_output_streams.CopyFileExample;
 import input_output_streams.FileReaderExample;
+import strings.CharsDemo;
 
 public class Main {
     public static void main(String[] args) {
 
-        Run run = new Run();
-        run.run();
+        CharsDemo charsDemo = new CharsDemo();
+        charsDemo.test();
 
 
     }
