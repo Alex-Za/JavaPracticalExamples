@@ -1,12 +1,9 @@
-import formater.FormatterExample;
+import nio_streams.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        FormatterExample formatterExample = new FormatterExample();
-        formatterExample.nTest();
-
-
-
+        FilePaths filePaths = new FilePaths();
+        filePaths.runTestDirectoryInfo();
     }
 }
