@@ -56,9 +56,27 @@ public class FilePaths {
                 } else {
                     System.out.println(entry.getName(1));
                 }
+
+                //TODO: for directory filtration
+//                Files.newDirectoryStream(Paths.get(dirName), "{Path,Dir}*.{java,class}");
             }
         } catch (Exception e) {
             System.out.println(e.getMessage());
+        }
+
+        //TODO: example creating DirectoryStream.Filter
+        DirectoryStream.Filter<Path> how = new DirectoryStream.Filter<Path>() {
+            @Override
+            public boolean accept(Path fileName) throws IOException {
+                if (Files.isWritable(fileName)) return true;
+                return false;
+            }
+        };
+
+        try (DirectoryStream<Path> directoryStream = Files.newDirectoryStream(Paths.get(dirName), how)) {
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
