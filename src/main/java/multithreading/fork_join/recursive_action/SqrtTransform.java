@@ -1,4 +1,4 @@
-package multithreading.fork_join;
+package multithreading.fork_join.recursive_action;
 
 import java.util.concurrent.RecursiveAction;
 
